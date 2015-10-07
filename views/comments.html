@@ -49,14 +49,15 @@
 		</div>
 
 		<div>
-<table >
+<div class="comments">
 	<% for (var i = cmmts.length-1; i >= 0; i--) { %>
-	<tr><td ><%= i%> </td>
-       <td> <%= cmmts[i].name %></td>
-       <td> <%=  cmmts[i].message %> </td>
-       <td> <%= cmmts[i].date %></td></tr>
+       
+      <%=  cmmts[i].message %> 
+     	<div id="user">says: <%= cmmts[i].name %></div>
+      <div><%= cmmts[i].date %></div><br/><br/>
+    
 <%}%>
-</table>
+ <div>
 		</div>
 
 </body>

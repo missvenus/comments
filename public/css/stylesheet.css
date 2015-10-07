@@ -208,3 +208,24 @@ th {
     background-color: green;
     color: white;
 }
+
+.comments {
+	font-style: italic;
+	text-align:left;
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom:30px;
+	padding: 25px 34px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 510px;
+	background-color: #FFF;
+	color: #637277;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+#user {
+	text-align:right;
+	
+}
