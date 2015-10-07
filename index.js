@@ -31,8 +31,7 @@ app.use(session({
 	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
 	proxy: true,
 	resave: true,
-	saveUninitialized: true,
-	store: new MongoStore({ host: 'localhost', port: 27017, db: 'comments'})
+	saveUninitialized: true
 	})
 );
 app.use(bodyParser.json());
