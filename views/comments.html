@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!--
+	This file is rendered by express.js, when the rurl /chat/123456 is visited in a browser.
+	It includes jQuery, socket.io.js (it is automatically served by the socket.io library), 
+	and a few more JavaScript files that you should check out.
+-->
+
+<html>
+
+<head>
+
+	<title>Private room</title>
+
+	<link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+	<header class="banner">
+
+		<h1 class="bannertext">
+			 Hello world
+		</h1>
+
+	</header>
+
+		<div class="connected">
+
+			<img src="img/img.jpg" id="creatorImage" />
+
+			<div class="infoConnected">
+				<h2>Do you like to add comment?</h2>
+				<br/>
+
+				<form method="post" action="/comment">
+					<textarea name="message" id="message" placeholder="Write something.."></textarea><br/>
+					<input type="text" name="yourName" id="yourName" placeholder="Your nick name" />
+				
+                    <input type="submit" id="yourEnter" value="ENTER" />
+
+				</form>
+
+			</div>
+
+		</div>
+
+		<div>
+<table >
+	<% for (var i = cmmts.length-1; i >= 0; i--) { %>
+	<tr><td ><%= i%> </td>
+       <td> <%= cmmts[i].name %></td>
+       <td> <%=  cmmts[i].message %> </td>
+       <td> <%= cmmts[i].date %></td></tr>
+<%}%>
+</table>
+		</div>
+
+</body>
+
+</html>
